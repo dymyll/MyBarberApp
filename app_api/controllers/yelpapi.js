@@ -12,7 +12,9 @@ module.exports.SEARCH = function(req, res){
 
 
 module.exports.Reviews = function(req, res){
-    yelp.reviews("sloss-barber-shop-amarillo")
+    var barbershop = req.params.barbershop;
+    var city = req.params.city;
+    yelp.reviews(barbershop + "-" +city)
     .then(function(result){
            res.json(result);
            

@@ -7,6 +7,8 @@ var ctrlYelp = require('../controllers/yelpapi');
 
 router.get('/barber/:city', ctrlYelp.SEARCH);
 
+router.get('/reviews/:barbershop/:city', ctrlYelp.Reviews);
+
 router.get('/shop/:barbershop/:city', ctrlYelp.ShopName);
 
 router.get('/data/', ctrlBarbers.barberDataReadAll);
