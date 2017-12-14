@@ -22,9 +22,10 @@ module.exports.barberDataReadAll = function(req, res) {
                 sendJSONresponse(res, 404, err);
             }
             console.log(barberData);
+            console.log(BarberData.find({}));
             sendJSONresponse(res, 200, barberData);
         });
-}
+};
 
 /* GET BarberData by Barber Work Place */
 module.exports.barberDataReadOne = function(req, res) {

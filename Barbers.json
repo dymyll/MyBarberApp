@@ -1,5 +1,5 @@
 
-	  {
+	    { 
 			"BarberFirstName": "Tom",
 			"BarberLastName": "Hill",
 			"TopSkills": ["Buzz cut", "Fade"],
@@ -32,7 +32,6 @@
 			"YearsExperienced": 2,
 			"City" : "Amarillo",
 			"BarberWorkPlace": "The Guy's Old Fashioned Barber Shop"
-
 		}		
 		{
 			"BarberFirstName": "Edward",
