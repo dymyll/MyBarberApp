@@ -1,0 +1,11 @@
+body{
+    
+    background-image: url('../background2.jpg');
+}
+
+.MyBG{
+    background-image: url('../background2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-size: 1440px 800px;
+}
