@@ -1,0 +1,45 @@
+
+	  {
+			"BarberFirstName": "Tom",
+			"BarberLastName": "Hill",
+			"TopSkills": ["Buzz cut", "Fade"],
+			"YearsExperienced": 5,
+			"City" : "Amarillo",
+			"BarberWorkPlace": "Sloss Barber Shop"
+		}
+		{
+			"BarberFirstName": "Greg",
+			"BarberLastName": "Hampton",
+			"TopSkills": ["Buzz cut", "Fade"],
+			"YearsExperienced": 8,
+			"City" : "Amarillo",
+			"BarberWorkPlace": "Kayne Quality Cut Barber Shop"
+
+		}
+		{
+			"BarberFirstName": "Curtis",
+			"BarberLastName": "Wayne",
+			"TopSkills": ["Buzz cut", "Fade"],
+			"YearsExperienced": 2,
+			"City" : "Amarillo",
+			"BarberWorkPlace": "The Guy's Old Fashioned Barber Shop"
+
+		}
+		{
+			"BarberFirstName": "Christopher",
+			"BarberLastName": "Ryan",
+			"TopSkills": ["Buzz cut", "Fade"],
+			"YearsExperienced": 2,
+			"City" : "Amarillo",
+			"BarberWorkPlace": "The Guy's Old Fashioned Barber Shop"
+
+		}		
+		{
+			"BarberFirstName": "Edward",
+			"BarberLastName": "Scissor Hands",
+			"TopSkills": ["Buzz cut", "Fade"],
+			"YearsExperienced": 2,
+			"City" : "Amarillo",
+			"BarberWorkPlace": "806 Barber & Beauty"
+
+		}	

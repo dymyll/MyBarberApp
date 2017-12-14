@@ -14,13 +14,13 @@
         vm.content = "Barber";
 
 
-        //check selected Departure
+        //check city
         if (vm.city !== null) {
             YelpSearch.city = vm.city;
-            console.log("This is your lat " + YelpSearch.city);
+            console.log("This is your city " + YelpSearch.city);
         }
         
-        //check selected Arrival
+        //check shopName 
         if (vm.shopName!== null) {
             YelpSearch.shopName = vm.shopName
             console.log("This is your barber shop name " + YelpSearch.shopName);
