@@ -1399,9 +1399,9 @@ a.bg-success:focus {
 .bg-info {
   background-color:white;
 }
-
+/*This is for the hover over the main content in this barber.view.html*/
 .bg-info:hover{
- background-color:rgb(18, 209, 234);;
+ background-color:rgb(18, 234, 126);;
 }
 a.bg-info:hover,
 a.bg-info:focus {
