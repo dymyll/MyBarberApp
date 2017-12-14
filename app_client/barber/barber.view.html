@@ -10,6 +10,9 @@
               <div class="col-lg-12" style="width: 800px; background-color:rgba(0, 0, 0, 0.5);  margin:0 auto" position="fixed"> 
                   <button type="button" class="btn btn-hover btn-primary" style="background-color: black" id="menu-toggle" ng-model="vm.toggle" ng-click="vm.toggle=!vm.toggle">Menu</button>
                     <h1>{{vm.content}}</h1>
+                     <form style="color:white">
+                        Enter City: <input type="text" style="background-color: rgba(0, 0, 0, 0.5)" ng-model="City">
+                     </form>
                        <!-- <p class="bg-info" ng-bind="vm.selectedDepartureICAO.airportName"></p> -->
                         <barber-info info="vm.getbarbershop"></barber-info>
                       <!--  <p class="bg-info" ng-bind="vm.selectedArrivalICAO.airportName"></p> -->
