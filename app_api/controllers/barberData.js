@@ -8,12 +8,12 @@ var sendJSONresponse = function(res, status, content)
     res.json(content);
 }
 
-/* GET all AirportData records */
+/* GET all BarberData records */
 module.exports.barberDataReadAll = function(req, res)
 {
   console.log("Finding all Barber Data Records", req);
   
-  //this will read all of  the data and send it back to the requested user
+  //this will read all of  the data and send it back to the user
   BarberData
     .find({})
     .exec(function(err, barberData){

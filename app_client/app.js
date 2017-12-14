@@ -4,7 +4,7 @@
 
   function config ($routeProvider, $locationProvider) {
     
-    console.log("BEING AIRPLANE SERVICES APP - MEAN STACK DRIVEN");
+    console.log("Barber Locator APP");
     
     $routeProvider
    /*
@@ -14,13 +14,7 @@
         controllerAs: 'vm'
       })
   */
-  /*
-      .when('/weather/', {
-        templateUrl: '/weather/weather.view.html',
-        controller: 'weatherCtrl',
-        controllerAs: 'vm'
-      })      
-    */  
+  
         .when('/barbers/', {
         templateUrl: '/barber/barber.view.html',
         controller: 'barberCtrl',

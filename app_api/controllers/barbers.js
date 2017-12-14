@@ -1,7 +1,5 @@
 var mongoose = require('mongoose');
-//var ClimbData = mongoose.model('ClimbData');
-//var TakeoffData = mongoose.model('TakeoffData');
-//var LandingData = mongoose.model('LandingData');
+
 var BarberData = mongoose.model('BarberData');
 
 
