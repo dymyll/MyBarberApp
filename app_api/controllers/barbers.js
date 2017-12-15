@@ -34,7 +34,8 @@ module.exports.barberDataReadOne = function(req, res) {
         BarberData
             .find({
                 //Barbers City: req.params.city
-                City: req.params.city
+                City: req.params.city,
+              
             })
             .exec(function(err, barberData) {
                 if (!barberData) {
@@ -59,5 +60,44 @@ module.exports.barberDataReadOne = function(req, res) {
         });
     }
 };
+
+
+/* GET BarberData by Barber workplace */
+module.exports.barberDataReadShop = function(req, res) {
+    console.log('Finding Barber Data Record', req.params);
+    if (req.params && req.params.city && req.params.shopName) {
+        BarberData
+            .find({
+                City: req.params.city,
+                BarberWorkPlace: req.params.shopName
+              
+            })
+            .exec(function(err, barberData) {
+                if (!barberData) {
+                    sendJSONresponse(res, 404, {
+                        "message": "No barbers in this city to be found"
+                    });
+                    return;
+                }
+                else if (err) {
+                    console.log(err);
+                    sendJSONresponse(res, 404, err);
+                    return;
+                }
+                console.log(barberData);
+                sendJSONresponse(res, 200, barberData);
+            });
+    }
+    else {
+        console.log('No city specified');
+        sendJSONresponse(res, 404, {
+            "message": "No city in request"
+        });
+    }
+};
+
+
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////

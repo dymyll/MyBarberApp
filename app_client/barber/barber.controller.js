@@ -16,12 +16,13 @@
 
         vm.content = "Barber";
         
-        vm.searchedCity;
+        vm.searchedCity = "Amarillo";
 
 
         //check city
         if (SearchedBarber.searchedCity !== null) {
             vm.searchedCity = SearchedBarber.searchedCity;
+            //SearchedBarber.searchedCity = vm.searchedCity;
             console.log("This is your city " + vm.searchedCity);
         }
         
@@ -36,10 +37,17 @@
 
         //refactored for Angular 1.6 - removed success/error, used Promises...
         vm.getLocalShop = function() {
-            BarberData.getBarberDataForCity()
+            //city should be what the system is looking for to choose what barbers to display
+            
+            var city = vm.searchedCity;
+            console.log(city);
+            
+            
+            BarberData.getBarberData()
             .then(function(response){
-                vm.barberdata = response.data;
-                console.log(vm.barberdata);
+                //vm.localShop should be used in barber.view.html to get the response
+                vm.localShop = response.data;
+                console.log(response);
             })
           .catch(function(e) {
           console.log(e);

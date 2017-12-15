@@ -19,5 +19,8 @@ router.get('/barberdata/', ctrlBarbers.barberDataReadAll);
 //This allows the system to find specific barbers based on their city
 router.get('/barberdata/:city', ctrlBarbers.barberDataReadOne);
 
+//specified based on city and shop
+router.get('/barbershop/:city/:shopName', ctrlBarbers.barberDataReadShop);
+
 
 module.exports = router;

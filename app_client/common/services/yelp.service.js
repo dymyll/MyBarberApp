@@ -7,16 +7,16 @@
    yelpsearch.$inject = ['$http'];
 
     function yelpsearch($http) {
-        var getBarberShop = function(city,shopName) {
+        var getBarberShop = function(barbershop, city) {
             //darkskyapi/:lat/:lon
-            city = "";
-            shopName = ""
+           barbershop="";
+           city="";
            // lon = "-101.845278";
-            return $http.get('/api/yelpapi' + '/' + shopName + city );
+            return $http.get('/api/yelpapi' + '/' + barbershop + city );
         };
         
         return {
-            getBarberShop: getBarberShop,
+            getBarberDataForCity: getBarberShop
         };
     }
 })();

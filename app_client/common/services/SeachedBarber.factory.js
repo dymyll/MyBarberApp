@@ -7,7 +7,7 @@
   //selectedData.$inject = ['$http'];
   function searchedBarber () {
       return {
-          searchedCity : '',
+          searchedCity : 'Amarillo',
           searchedShop: ''
       };
   }
