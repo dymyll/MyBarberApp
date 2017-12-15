@@ -9,8 +9,8 @@
     function yelpsearch($http) {
         var getBarberShop = function(city,shopName) {
             //darkskyapi/:lat/:lon
-            city = "Amarillo";
-            shopName = "Sloss Barber Shop"
+            city = "";
+            shopName = ""
            // lon = "-101.845278";
             return $http.get('/api/yelpapi' + '/' + shopName + city );
         };

@@ -11,6 +11,13 @@ router.get('/reviews/:barbershop/:city', ctrlYelp.Reviews);
 
 router.get('/shop/:barbershop/:city', ctrlYelp.ShopName);
 
-router.get('/data/', ctrlBarbers.barberDataReadAll);
+/////////////////- MAIN ROUTES TO ACCESS -///////////////////////////////////////////
+
+//reads all the barbers in the system 
+router.get('/barberdata/', ctrlBarbers.barberDataReadAll);
+
+//This allows the system to find specific barbers based on their city
+router.get('/barberdata/:city', ctrlBarbers.barberDataReadOne);
+
 
 module.exports = router;

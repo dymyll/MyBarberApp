@@ -4,39 +4,50 @@
         .module('BarberApp')
         .controller('BarberCtrl', barberCtrl);
 
-    barberCtrl.$inject = ['$scope', 'YelpSearch'];
-
-    function barberCtrl($scope, YelpSearch) {
-
-        var vm = this;
+    barberCtrl.$inject = ['$scope', 'BarberData', 'SearchedBarber' ,'YelpSearch'];
+    
+    var Go = barberCtrl();
+    
+    function barberCtrl($scope, BarberData, SearchedBarber, YelpSearch) {
+        
         console.log(window.location);
+        var vm = this;
+        //console.log(window.location);
 
         vm.content = "Barber";
+        
+        vm.searchedCity;
 
 
         //check city
-        if (vm.city !== null) {
-            YelpSearch.city = vm.city;
-            console.log("This is your city " + YelpSearch.city);
+        if (SearchedBarber.searchedCity !== null) {
+            vm.searchedCity = SearchedBarber.searchedCity;
+            console.log("This is your city " + vm.searchedCity);
         }
         
+        /*
         //check shopName 
         if (vm.shopName!== null) {
-            YelpSearch.shopName = vm.shopName
+            YelpSearch.shopName = vm.shopName;
             console.log("This is your barber shop name " + YelpSearch.shopName);
         }
 
-
+        */
 
         //refactored for Angular 1.6 - removed success/error, used Promises...
         vm.getLocalShop = function() {
-
+            BarberData.getBarberDataForCity()
+            .then(function(response){
+                vm.barberdata = response.data;
+                console.log(vm.barberdata);
+            })
+          .catch(function(e) {
+          console.log(e);
+        });
             /*global navigator*/
             
-		  var city = vm.city;
-		  var shopName = vm.shopName;
-		
-
+            
+            /*
             YelpSearch.getBarberShop(city, shopName)
                 .then(function(response) {
                     vm.getbarbershop = response.data;
@@ -45,12 +56,39 @@
                 .catch(function(e) {
                     console.log(e);
                 });
-       
+       */
     };
+    
+    vm.toggleMenu = function() {
+      if (vm.class === "toggled") {
+        vm.class = "";
+      }
+      else {
+        vm.class = "toggled";
+      }
+      console.log(vm.class + " is good");
+    };
+    //save the search 
+     $scope.$watch(
+      function(){
+        return vm.searchedCity;    
+      }, 
+      function (newSearch, oldSearch) {
+        console.log(oldSearch);
+        console.log(newSearch);
+        if (newSearch.city !== oldSearch.city){
+          SearchedBarber.searchedCity = newSearch;
+        } 
+      }, 
+      true
+    );
+    
+    
 
         //call services
         vm.getLocalShop();
-    
+        
     }
 
+   
 })();

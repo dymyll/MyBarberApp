@@ -16,6 +16,7 @@ module.exports.barberDataReadAll = function(req, res)
   //this will read all of  the data and send it back to the user
   BarberData
     .find({})
+    console.log(BarberData.find({}))
     .exec(function(err, barberData){
       if(err){
         console.log(err);
@@ -24,4 +25,4 @@ module.exports.barberDataReadAll = function(req, res)
       console.log(barberData);
       sendJSONresponse(res, 200, barberData);
     });
-}
+};

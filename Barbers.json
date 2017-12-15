@@ -42,3 +42,12 @@
 			"BarberWorkPlace": "806 Barber & Beauty"
 
 		}	
+		{
+			"BarberFirstName": "Ray",
+			"BarberLastName": "Bands",
+			"TopSkills": ["Buzz cut", "Fade"],
+			"YearsExperienced": 5,
+			"City" : "Austin",
+			"BarberWorkPlace": "Gastons"
+
+		}	

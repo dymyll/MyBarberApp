@@ -27,18 +27,19 @@ module.exports.barberDataReadAll = function(req, res) {
         });
 };
 
-/* GET BarberData by Barber Work Place */
+/* GET BarberData by Barber city */
 module.exports.barberDataReadOne = function(req, res) {
     console.log('Finding Barber Data Record', req.params);
-    if (req.params && req.params.shopName) {
+    if (req.params && req.params.city) {
         BarberData
             .find({
-                BarberWorkPlace: req.params.shopName
+                //Barbers City: req.params.city
+                City: req.params.city
             })
             .exec(function(err, barberData) {
                 if (!barberData) {
                     sendJSONresponse(res, 404, {
-                        "message": "Barber shop name not found"
+                        "message": "No barbers in this city to be found"
                     });
                     return;
                 }
@@ -52,9 +53,9 @@ module.exports.barberDataReadOne = function(req, res) {
             });
     }
     else {
-        console.log('No shop name specified');
+        console.log('No city specified');
         sendJSONresponse(res, 404, {
-            "message": "No shop name in request"
+            "message": "No city in request"
         });
     }
 };

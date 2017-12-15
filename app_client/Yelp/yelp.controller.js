@@ -2,11 +2,11 @@
 
     angular
         .module('BarberApp')
-        .controller('ReviewsCtrl', reviewsCtrl);
+        .controller('YelpCtrl', yelpCtrl);
 
-    reviewsCtrl.$inject = ['$scope', 'SearchedBarber', 'YelpSearch'];
+    yelpCtrl.$inject = ['$scope', 'SearchedBarber', 'YelpSearch'];
 
-    function reviewsCtrl($scope, SearchedBarber, YelpSearch){
+    function yelpCtrl($scope, SearchedBarber, YelpSearch){
         
         var vm = this;
         console.log(window.location);

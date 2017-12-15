@@ -11,6 +11,7 @@
             BarberLastName: String,
             TopSkills: [String],
             YearsExperienced: Number,
+            City: String,
             BarberWorkPlace: String
 
  });
