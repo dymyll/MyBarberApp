@@ -17,7 +17,7 @@
   
         .when('/barbers/', {
         templateUrl: '/barber/barber.view.html',
-        controller: 'barberCtrl',
+        controller: 'BarberCtrl',
         controllerAs: 'vm'
       })
       

@@ -6,18 +6,20 @@
 
     barberCtrl.$inject = ['$scope', 'BarberData', 'SearchedBarber' ,'YelpSearch'];
     
-    var Go = barberCtrl();
-    
     function barberCtrl($scope, BarberData, SearchedBarber, YelpSearch) {
         
-        console.log(window.location);
+        //console.log(window.location);
         var vm = this;
         //console.log(window.location);
 
         vm.content = "Barber";
         
         vm.searchedCity = "Amarillo";
-
+        
+        if(SearchedBarber !== null)
+        {
+            console.log("YEAH");
+        }
 
         //check city
         if (SearchedBarber.searchedCity !== null) {
@@ -43,7 +45,7 @@
             console.log(city);
             
             
-            BarberData.getBarberData()
+            BarberData.getBarberDataForCity(city)
             .then(function(response){
                 //vm.localShop should be used in barber.view.html to get the response
                 vm.localShop = response.data;

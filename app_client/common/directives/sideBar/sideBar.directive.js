@@ -3,17 +3,17 @@
   angular
     .module('BarberApp')
     .directive('sidebar', sideBar);
-  var navIcon = ('#nav-icon2');
-  var menu = ('.left-menu').sliiide({place: 'left', exit_selector: '.left-exit', toggle: '#nav-icon2', no_scroll: true});
-  var notes = ('.note');
-  var toggles = ('.slider-toggle');
+ // var navIcon = ('#nav-icon2');
+  //var menu = ('.left-menu').sliiide({place: 'left', exit_selector: '.left-exit', toggle: '#nav-icon2', no_scroll: true});
+  //var notes = ('.note');
+  //var toggles = ('.slider-toggle');
 
   function sideBar () {
     
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("active");
-});
+   // $("#menu-toggle").click(function(e) {
+     //   e.preventDefault();
+      //  $("#wrapper").toggleClass("active");
+//});
     return {
       restrict: 'EA',
       templateUrl: '/common/directives/sideBar/sideBar.template.html'
@@ -21,7 +21,7 @@
   }
 
   
-
+/*
 var clickHandler = function() {
   
     var button = (this);
@@ -44,6 +44,6 @@ var clickHandler = function() {
 }
   toggles.on('click', clickHandler);
 
-
+*/
 
 })();
