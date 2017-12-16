@@ -1,11 +1,12 @@
 <div class="row" ng-init="barbers=['TestSam','TestAdam']"> 
 <!--<div class="row" ng-init="barbers=[barber.BarberData]"> -->
+    <p style="color:white" > <font size="5">Barber Results </font> </p>
   <ul>
     <li ng-repeat="x in barbers">
     <div class="col-xs-12" ng-init="barbers">
       <p class="bg-hover bg-info" >
 
-        Barber Results<br />
+        
         Barber: {{x}} <br />
         City: {{barber.barberData}}  <br />
         BarberShop Name: {{barber.barberData.BarberWorkPlace}}  <br />
