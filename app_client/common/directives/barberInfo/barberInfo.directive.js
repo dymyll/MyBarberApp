@@ -2,14 +2,14 @@
 
   angular
     .module('BarberApp')
-    .directive('barberInfo', [barberInfo]);
+    .directive('barberInfo', barberInfo);
 
   function barberInfo () {
     return {
       restrict: 'EA',
       scope: {
        // weather : '=info',
-        barber : '=info',
+        barbers : '=info',
       },      
       templateUrl: '/common/directives/barberInfo/barberInfo.template.html'
     };

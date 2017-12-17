@@ -9,7 +9,7 @@
             },
             BarberFirstName: String,
             BarberLastName: String,
-            TopSkills: [String],
+            TopSkills: String,
             YearsExperienced: Number,
             City: String,
             BarberWorkPlace: String

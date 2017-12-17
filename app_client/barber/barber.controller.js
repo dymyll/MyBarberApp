@@ -11,10 +11,16 @@
         //console.log(window.location);
         var vm = this;
         //console.log(window.location);
+         
+         
 
+        $scope.citySearch = {
+            cityName: SearchedBarber.searchedCity
+      };
+         
         vm.content = "Barber";
         
-        vm.searchedCity = "Amarillo";
+        vm.searchedCity = "";
         
         if(SearchedBarber !== null)
         {
@@ -44,12 +50,21 @@
             var city = vm.searchedCity;
             console.log(city);
             
+            var i = Number;
             
+ 
             BarberData.getBarberDataForCity(city)
             .then(function(response){
                 //vm.localShop should be used in barber.view.html to get the response
                 vm.localShop = response.data;
-                console.log(response);
+                console.log(vm.localShop);
+                /*
+                for ( i = 0; i <= response.data.length; i++){
+                    console.log(response.data[i].BarberFirstName);
+                   
+                }
+                */
+                console.log("Show Barber's First Name: " + response.data[2].BarberFirstName);
             })
           .catch(function(e) {
           console.log(e);

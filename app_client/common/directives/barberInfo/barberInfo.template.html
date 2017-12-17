@@ -1,15 +1,16 @@
-<div class="row" ng-init="barbers=['TestSam','TestAdam']"> 
-<!--<div class="row" ng-init="barbers=[barber.BarberData]"> -->
+<!-- <div class="row" ng-init="barbers=['TestSam','TestAdam']"> -->
+<div class="row" > 
     <p style="color:white" > <font size="5">Barber Results </font> </p>
   <ul>
+    <!--x Looks at every profile in BarberData -->
     <li ng-repeat="x in barbers">
-    <div class="col-xs-12" ng-init="barbers">
+    <div class="col-xs-12" >
       <p class="bg-hover bg-info" >
-
-        
-        Barber: {{x}} <br />
-        City: {{barber.barberData}}  <br />
-        BarberShop Name: {{barber.barberData.BarberWorkPlace}}  <br />
+        Barber: {{x.BarberFirstName}} <br />
+        City: {{x.City}}  <br />
+        Year of Experience: {{x.YearsExperienced}} <br />
+        Top Skills: {{x.TopSkills}} <br />
+        BarberShop Name: {{x.BarberWorkPlace}}  <br />
       </p>
         </li>
       </ul>

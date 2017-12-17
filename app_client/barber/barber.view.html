@@ -12,13 +12,13 @@
                   <!--  <h1>{{vm.content}}</h1> -->
                     <h1 style="color:white"> <u> Find Barber </u></h1>
                     </br>
-                     <form style="color:white">
-                        Enter City: <input type="text" style="text-transform: capitalize; background-color: rgba(0, 0, 0, 0.5); border-color: rgb(18, 209, 234); padding: 4px " ng-model="City" id="CityName">
-                        <button ng-click="Go"  style="background-color:rgba(0, 0, 0, 0.5)"> Find Barber </button>
+                     <form style="color:white" ng-controller="BarberCtrl" >
+                        Enter City: <input type="text" style="text-transform: capitalize; background-color: rgba(0, 0, 0, 0.5); border-color: rgb(18, 209, 234); padding: 4px " ng-model="citySearch.city" id="CityName">
+                        <button ng-click="searchedBarber.searchedCity(CityName)"  style="background-color:rgba(0, 0, 0, 0.5)"> Find Barber </button>
                      </form> 
                        </br>
                        <!-- <p class="bg-info" ng-bind="vm.selectedDepartureICAO.airportName"></p> -->
-                        <barber-info info="vm.localShop"></barber-info>
+                        <barber-info info="vm.localShop" ></barber-info>
                          
 
                         
@@ -30,4 +30,10 @@
     <!-- /#page-content-wrapper -->
     </div>
 </div>
+
+    <script>
+      function myFunction() {
+          document.getElementById("CityName").innerHTML = "vm.SearchedBarber.searchedCity";
+      }
+    </script>
 <!-- /#wrapper -->
